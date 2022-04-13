@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FilmService } from 'src/app/service/film.service';
 
 @Component({
   selector: 'app-carosello',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carosello.component.css']
 })
 export class CaroselloComponent implements OnInit {
-
-  constructor() { }
+  comingFilm: any = [];
+  preurl = 'https://image.tmdb.org/t/p/original/'
+  constructor(private film:FilmService) { 
+    this.film.getDataLatest().subscribe(data=>{
+      this.comingFilm = data
+    })
+  }
 
   ngOnInit(): void {
   }
