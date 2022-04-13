@@ -13,7 +13,7 @@ export class FilmService {
     return this.http.get(url);
   }
   getDataLatest(){
-    let url = "https://api.themoviedb.org/3/movie/upcoming?api_key=05797c0b6fdd31b6eaf12d74f4bb9a67&language=en-US&page=1"
+    let url = "https://api.themoviedb.org/3/list/3219?api_key=05797c0b6fdd31b6eaf12d74f4bb9a67&language=en-US"
     return this.http.get(url);
   }
   getDataGeneri(){

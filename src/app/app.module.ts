@@ -10,6 +10,7 @@ import { CaroselloCardComponent } from './components/carosello-card/carosello-ca
 import { OfferteComponent } from './components/offerte/offerte.component';
 import { SingleFilmComponent } from './components/single-film/single-film.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     CaroselloComponent,
     CaroselloCardComponent,
     OfferteComponent,
-    SingleFilmComponent
+    SingleFilmComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
