@@ -11,6 +11,7 @@ import { OfferteComponent } from './components/offerte/offerte.component';
 import { SingleFilmComponent } from './components/single-film/single-film.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './components/about/about.component';
+import { InterfacciaUtenteComponent } from './components/interfaccia-utente/interfaccia-utente.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AboutComponent } from './components/about/about.component';
     CaroselloCardComponent,
     OfferteComponent,
     SingleFilmComponent,
-    AboutComponent
+    AboutComponent,
+    InterfacciaUtenteComponent
   ],
   imports: [
     BrowserModule,

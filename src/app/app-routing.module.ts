@@ -8,24 +8,16 @@ import { RegistrazioneComponent } from './components/registrazione/registrazione
 import { SingleFilmComponent } from './components/single-film/single-film.component';
 
 const routes: Routes = [
-  {path: '',
-   component: HomepageComponent
-  }, 
-  {path: 'registrazione',
-  component: RegistrazioneComponent
+  {
+    path: '',
+    component: HomepageComponent
   },
-  {path: 'singlefilm', 
-  component: SingleFilmComponent
+  { path: 'registrazione', component: RegistrazioneComponent },
+  { path: 'singlefilm/:idCliccato', component: SingleFilmComponent},
+  { path: 'Film', component: CaroselloCardComponent },
+  {    path: 'Offerte', component: OfferteComponent
   },
-  {path: 'Film', 
-  component: CaroselloCardComponent
-  },
-  {path: 'Offerte', 
-  component: OfferteComponent
-  },
-  {path: 'ChiSiamo', 
-  component: AboutComponent
-  }
+  { path: 'ChiSiamo', component: AboutComponent }
 ];
 
 @NgModule({

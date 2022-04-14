@@ -1,3 +1,4 @@
+import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FilmService } from 'src/app/service/film.service';
 
@@ -7,27 +8,41 @@ import { FilmService } from 'src/app/service/film.service';
   styleUrls: ['./carosello-card.component.css']
 })
 export class CaroselloCardComponent implements OnInit {
+
+  public idCliccato: string;
+
+  public isCollapsed = true;
+  public isCollapsed2 = true;
+
   popularFilm: any = [];
-  
-  generiFilm: any = [];
+
   preurl = 'https://image.tmdb.org/t/p/original/'
-  
-  constructor(private film:FilmService) { 
-    this.film.getDataPopular().subscribe(data=>{
-      this.popularFilm = data
-    })
 
+  pippoCAZZO: FilmService;
+  constructor(private film: FilmService) {
+    this.pippoCAZZO = film;
     
-
-    this.film.getDataGeneri().subscribe(data=>{
-      this.generiFilm = data
-    })
   }
+
+
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.film.getDataPopular().subscribe(data => {
+      this.popularFilm = data
+    }
+    )
   }
+  switchCarosello() {
+    this.isCollapsed = !this.isCollapsed2;
+    this.isCollapsed2 = !this.isCollapsed;
   }
 
- 
+  saveId(idCliccato: string) {
+    this.idCliccato = idCliccato;
+    console.log(idCliccato);
+  }
+
+
+}
+
 
 

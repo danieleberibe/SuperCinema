@@ -1,19 +1,49 @@
+
+<p>
+    <button type="button" class="btn btn-outline-primary" (click)="collapse.toggle();switchCarosello()" [attr.aria-expanded]="!isCollapsed">
+     {{isCollapsed}}
+    </button>
+
+    <button type="button" class="btn btn-outline-primary" (click)="collapse2.toggle();switchCarosello()" [attr.aria-expanded]="!isCollapsed2">
+        {{isCollapsed2}}
+      </button>
+      
+  </p>
+
+  <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+    <div class="card">
+      <div class="card-body">
+       Primo carosello
+      </div>
+    </div>
+  </div>
+
+  <div #collapse2="ngbCollapse" [(ngbCollapse)]="isCollapsed2">
+    <div class="card">
+      <div class="card-body">
+      Secondo carosello
+      </div>
+    </div>
+  </div>
+
 <div class="row mt-5">
     <div class="py-4 d-flex justify-content-center">
         <div class="container d-flex justify-content-center">
             <div class="row d-flex justify-content-center">
+            
                 <div class="card m-1" style="width: 18rem;" *ngFor="let item of this.popularFilm.items">
-                    <img class="card-img-top" src="{{preurl}}{{item.poster_path}}" alt="Card image cap">
+                  <a [routerLink]="['/idCliccato', item.id]"><img class="card-img-top" src="{{preurl}}{{item.poster_path}}" alt="Card image cap"></a>
                     <div class="card-body">
                         <h6 class="card-title">{{item.original_title}} <br><br><strong
                                 style="color: green;">Vote:</strong> <strong>{{item.vote_average}}</strong></h6>
-                        <a href="#" class="btn btn-primary">{{item.id}}</a>
+                        <a  class="btn btn-primary">{{item.id}}</a>
                     </div>
                 </div>
             </div><br>
         </div>
     </div>
 </div>
+
 
 
   
