@@ -13,13 +13,13 @@ export class CaroselloCardComponent implements OnInit {
 
   public isCollapsed = true;
   public isCollapsed2 = true;
-
+  id :string;
   popularFilm: any = [];
 
   preurl = 'https://image.tmdb.org/t/p/original/'
 
   pippoCAZZO: FilmService;
-  constructor(private film: FilmService) {
+  constructor(private film: FilmService ) {
     this.pippoCAZZO = film;
     
   }
@@ -36,9 +36,9 @@ export class CaroselloCardComponent implements OnInit {
     this.isCollapsed2 = !this.isCollapsed;
   }
 
-  saveId(idCliccato: string) {
-    this.idCliccato = idCliccato;
-    console.log(idCliccato);
+  saveId(iddio: string) {
+    this.id = iddio;
+
   }
 
 

@@ -10,9 +10,7 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 export class CaroselloComponent implements OnInit {
   comingFilm: any = [];
   preurl = 'https://image.tmdb.org/t/p/original/'
-  images = [700, 533, 807, 124].map((n) => `https://picsum.photos/id/${n}/900/500`);
-
-
+  
   constructor(private film:FilmService,config: NgbCarouselConfig) { 
     this.film.getDataLatest().subscribe(data=>{
       this.comingFilm = data

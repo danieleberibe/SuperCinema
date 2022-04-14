@@ -13,7 +13,8 @@ id: number;
 
   }
 
-  ngOnInit(): void  {     this.activatedRoute.params.subscribe(p => {       this.id = p['idCliccato'];     });   
+  ngOnInit(): void  {this.activatedRoute.params.subscribe(p => {this.id = p['idCliccato'];});   
+  
   }
 
 }
