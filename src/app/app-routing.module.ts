@@ -12,12 +12,26 @@ const routes: Routes = [
     path: '',
     component: HomepageComponent
   },
-  { path: 'registrazione', component: RegistrazioneComponent },
-  { path: 'singlefilm/:idCliccato', component: SingleFilmComponent},
-  { path: 'Film', component: CaroselloCardComponent },
-  {    path: 'Offerte', component: OfferteComponent
+  { 
+  path: 'registrazione', 
+  component: RegistrazioneComponent 
   },
-  { path: 'ChiSiamo', component: AboutComponent }
+  { 
+  path: 'singlefilm/:idCliccato', 
+  component: SingleFilmComponent
+  },
+  { 
+  path: 'Film', 
+  component: CaroselloCardComponent 
+  },
+  {    
+  path: 'Offerte', 
+  component: OfferteComponent
+  },
+  { 
+  path: 'ChiSiamo', 
+  component: AboutComponent 
+  }
 ];
 
 @NgModule({

@@ -18,15 +18,15 @@ export class CaroselloCardComponent implements OnInit {
 
   preurl = 'https://image.tmdb.org/t/p/original/'
 
-  pippoCAZZO: FilmService;
+  pippo: FilmService;
   constructor(private film: FilmService ) {
-    this.pippoCAZZO = film;
+    this.pippo = film;
     
   }
 
 
   ngOnInit(): void {
-    this.film.getDataPopular().subscribe(data => {
+    this.pippo.getDataPopular().subscribe(data => {
       this.popularFilm = data
     }
     )

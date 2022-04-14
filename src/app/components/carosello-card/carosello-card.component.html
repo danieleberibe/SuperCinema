@@ -32,7 +32,7 @@
             <div class="row d-flex justify-content-center">
             
                 <div class="card m-1" style="width: 18rem;" *ngFor="let item of this.popularFilm.items">
-                  <a [routerLink]="['/idCliccato', item.id]"><img class="card-img-top" src="{{preurl}}{{item.poster_path}}" alt="Card image cap"></a>
+                  <a [routerLink]="['/singlefilm', item.id]"><img class="card-img-top" src="{{preurl}}{{item.poster_path}}" alt="Card image cap"></a>
                     <div class="card-body">
                         <h6 class="card-title">{{item.original_title}} <br><br><strong
                                 style="color: green;">Vote:</strong> <strong>{{item.vote_average}}</strong></h6>

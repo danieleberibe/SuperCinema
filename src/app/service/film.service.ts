@@ -27,6 +27,10 @@ export class FilmService {
     let url = "https://api.themoviedb.org/3/genre/movie/list?api_key=05797c0b6fdd31b6eaf12d74f4bb9a67&language=en-US"
     return this.http.get(url);
   }
+  getSingleFilmData(id:string){
+    let url = "https://api.themoviedb.org/3/movie/"+ id +"?api_key=05797c0b6fdd31b6eaf12d74f4bb9a67&language=en-US"
+    return this.http.get(url)
+  }
 
 
  

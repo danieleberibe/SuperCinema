@@ -1,23 +1,15 @@
+<div class="container p-4" >
 
-<div class="container p-4">
-
-    <div class="row">
 
         <div class="col-6">
-            <img src="" alt="">
+            <img src="{{preUrl}}{{this.dataFilm.backdrop_path}}" alt="">
         </div>
 
         <div class="col-6 ">
-            <h2> Nome film </h2>
-            <p>genere:</p>
-            <p>rating:</p>
-            <p>descrizione:</p>
+            <h2> {{this.dataFilm.original_title}} </h2>
+            <p><strong>Vote </strong>{{this.dataFilm.vote_average}}</p>
+            <p>{{this.dataFilm.overview}}</p>
         </div>
 
-    </div>
-
-    <div class="container-fluid">
-        <h1>CIAO</h1>
-    </div>
 
 </div>
