@@ -1,1 +1,53 @@
-<p>registrazione works!</p>
+<div class="container-fluid d-flex align-items-center justify-content-center vh-100 ">
+
+    <div class="card p-5 " style="width: 25rem;">
+  
+  
+      <h1 class="mx-4"> Registrazione </h1>
+      <div class=" ">
+  
+        <form #mioform="">
+          <div class="">
+            <label for="nome" class="form-label">Nome* </label>
+            <input class="form-control" type="text" name="nome" placeholder="Il tuo nome" >
+          </div>
+  
+          <div class="">
+            <label for="nome" class="form-label">Cognome </label>
+            <input class="form-control" type="text" name="cognome" placeholder="Il tuo cognome" >
+          </div>
+  
+          <div class="">
+            <label for="email" class="form-label">Email* </label>
+            <input class="form-control" type="email" name="email" placeholder="La tua email" >
+          </div>
+  
+          <div class="">
+            <label for="nome" class="form-label">Password </label>
+            <input class="form-control" type="password" name="password" placeholder="La tua password" >
+          </div>
+          
+          <p class="m-1">Data nascita</p>
+          <input class="my-2" type="date" id="start" name="trip-start" value="2018-07-22"  min="1900-00-00" max="2100-00-00">
+  
+          <div class="form-check" >
+  
+            <input class="form-check-input" type="radio" id="flexRadioDefault1" name="sesso" >
+            <label class="form-check-label" for="flexRadioDefault">
+             
+            </label>
+          </div>
+  
+          <p class="">seleziona una provincia</p>
+          <select class="form-select my-2" matNativeControl required  name="province">
+            <option selected ></option>
+  
+          </select>
+  
+          <button type="submit">Invia</button>
+        </form>
+      </div>
+    </div>
+  
+  
+  </div>
