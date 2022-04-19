@@ -31,12 +31,16 @@
         <div class="container d-flex justify-content-center">
             <div class="row d-flex justify-content-center">
             
-                <div class="card m-1" style="width: 18rem;" *ngFor="let item of this.popularFilm.items">
-                  <a [routerLink]="['/singlefilm', item.id]"><img class="card-img-top" src="{{preurl}}{{item.poster_path}}" alt="Card image cap"></a>
-                    <div class="card-body">
-                        <h6 class="card-title">{{item.original_title}} <br><br><strong
-                                style="color: green;">Vote:</strong> <strong>{{item.vote_average}}</strong></h6>
-                        <a  class="btn btn-primary">{{item.id}}</a>
+                <div class="card p-2 m-2" style="width: 15rem;" *ngFor="let item of this.popularFilm.items">
+      
+                  <a [routerLink]="['/singlefilm', item.id]"> <img class="card-img-top" src="{{preurl}}{{item.poster_path}}" alt="Card image cap">
+                  
+                  </a>
+                    <div class="card-body">   
+                       <h5 class="card-title">{{item.original_title}}</h5> 
+                     
+                          <strong style="color: green;">Vote:</strong> <strong>{{item.vote_average}}</strong>
+                           <button  class="btn btn-success rounded-pill mt-2">Prenota un ticket</button>
                     </div>
                 </div>
             </div><br>

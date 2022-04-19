@@ -15,7 +15,7 @@ export class FilmService {
 
   constructor(private http:HttpClient) { }
 
-    getDataPopular(){
+  getDataPopular(){
     let url = "https://api.themoviedb.org/3/list/1221?api_key=05797c0b6fdd31b6eaf12d74f4bb9a67&language=en-US"
     return this.http.get(url);
   }

@@ -21,7 +21,9 @@ export class SingleFilmComponent implements OnInit {
     this.activatedRoute.params.subscribe(p => {
       this.id = p['idCliccato'];
     });   
+    
     console.log(this.id);
+    
     this.film.getSingleFilmData(this.id).subscribe(data => {
       this.dataFilm = data
       console.log(this.dataFilm);

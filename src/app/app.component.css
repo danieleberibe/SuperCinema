@@ -1,0 +1,23 @@
+.navbar{
+    background-color: black !important;
+  
+}
+.navbar div ul li:hover{
+text-decoration: underline;
+}
+
+button{
+    background-color: rgb(255, 28, 96);
+    border: 1px solid white !important;
+}
+ button:hover{
+    background-color: rgba(255, 28, 96, 0.781);
+}
+
+footer{
+    background-color: black;
+    color:white;
+}
+footer div ul li:hover{
+    text-decoration:underline;
+}
