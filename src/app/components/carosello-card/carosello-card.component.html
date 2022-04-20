@@ -31,9 +31,9 @@
         <div class="container d-flex justify-content-center">
             <div class="row d-flex justify-content-center">
             
-                <div class="card p-2 m-2" style="width: 15rem;" *ngFor="let item of this.popularFilm.items">
+                <div class="card p-2 m-2" style="width: 15rem;" *ngFor="let item of this.popularFilm">
       
-                  <a [routerLink]="['/singlefilm', item.id]"> <img class="card-img-top" src="{{preurl}}{{item.poster_path}}" alt="Card image cap">
+                  <a [routerLink]="['/singlefilm', item.id]"> <img class="card-img-top" src="{{preurl}}{{item.img}}" alt="Card image cap">
                   
                   </a>
                     <div class="card-body">   
